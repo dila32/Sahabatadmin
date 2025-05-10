@@ -1,187 +1,23 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sahabat Belajar</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #D6F0FF;
-      color: #333;
-    }
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    header img {
-      max-width: 150px;
-      border-radius: 20px;
-    }
-
-    h1 {
-      color: #1C3D5A;
-      margin-top: 1rem;
-    }
-
-    .tagline {
-      font-size: 1.2rem;
-      color: #FF9F1C;
-      margin-bottom: 2rem;
-    }
-
-    section {
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .program {
-      background-color: #fff;
-      padding: 1rem;
-      margin: 1rem auto;
-      max-width: 600px;
-      border-radius: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-
-    th, td {
-      padding: 0.8rem;
-      border-bottom: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #FF9F1C;
-      color: white;
-    }
-
-    td {
-      background-color: #fefefe;
-    }
-
-    .cta {
-      margin-top: 2rem;
-      background-color: #FF9F1C;
-      color: white;
-      padding: 1rem;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    .cta a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .form-section {
-      background-color: #fff;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 600px;
-      border-radius: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      animation: fadeIn 2s ease-in;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    label {
-      text-align: left;
-      font-weight: bold;
-    }
-
-    input, select, textarea {
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    button {
-      background-color: #FF9F1C;
-      color: white;
-      border: none;
-      padding: 1rem;
-      border-radius: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #e68c00;
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 1.5rem; }
-      .tagline { font-size: 1rem; }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="IMG-20250510-WA0033.jpg" alt="IMG-20250510-WA0033.jpg"/>
-    <h1>Sahabat Belajar</h1>
-    <p class="tagline">Belajar Bersama, Tumbuh Bersama 🌱</p>
-  </header>
-
-  <section class="program">
-    <h2>Program Bimbingan</h2>
-    <p>Kami hadir sebagai sahabat belajar yang membantu siswa meraih prestasi terbaiknya. Pilih program yang sesuai kebutuhanmu:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Program</th>
-          <th>Fasilitas</th>
-          <th>Harga</th>
-        </tr>
-      </thead>
-      <tbody>
         <tr>
           <td>Reguler</td>
-          <td>Kelas 8x/bulan, Modul, Try Out</td>
+          <td>Kelas 2-3x/minggu, Modul, Try Out</td>
           <td>Rp 350.000/bulan</td>
         </tr>
         <tr>
           <td>Intensif</td>
-          <td>12x/bulan, Modul, Tryout, Konsultasi</td>
+          <td>5x/minggu, Simulasi Ujian, Fokus UTBK</td>
           <td>Rp 600.000/bulan</td>
         </tr>
         <tr>
           <td>Privat</td>
           <td>Satu siswa satu tutor, Fleksibel</td>
-          <td>Silahkan konsultasikan dengan admin untuk jadwal dan harga/sesi</td>
+          <td>Rp Silahkan konsultasikan dengan admin untuk jadwal dan harga/sesi</td>
         </tr>
         <tr>
-          <td>Online</td>]
+          <td>Online</td>
           <td>Live Zoom, E-Modul, Konsultasi</td>
-          <td>Silahkan konsultasikan dengan admin terlebih dahulu</td>
+          <td>Rp Silahkan konsultasikan dengan admin/bulan</td>
         </tr>
       </tbody>
     </table>
@@ -195,12 +31,12 @@
 
   <section class="form-section">
     <h2>Formulir Pendaftaran</h2>
-    <form action="#" method="POST">
+    <form onsubmit="sendWhatsApp(); return false;">
       <label for="nama">Nama Lengkap</label>
-      <input type="text" id="nama" name="nama" required />
+      <input type="text" id="nama" required />
 
       <label for="program">Pilih Program</label>
-      <select id="program" name="program" required>
+      <select id="program" required>
         <option value="Reguler">Reguler</option>
         <option value="Intensif">Intensif</option>
         <option value="Privat">Privat</option>
@@ -208,68 +44,33 @@
       </select>
 
       <label for="kontak">Nomor WhatsApp</label>
-      <input type="tel" id="kontak" name="kontak" required />
+      <input type="tel" id="kontak" required />
 
       <label for="catatan">Catatan Tambahan</label>
-      <textarea id="catatan" name="catatan" rows="4"></textarea>
+      <textarea id="catatan" rows="4"></textarea>
 
-      <button type="submit">Kirim Pendaftaran</button>
+      <button type="submit">Kirim ke WhatsApp</button>
     </form>
-  </form>
-
-<script>
-  function kirimWhatsApp(e) {
-    e.preventDefault();
-    const nama = document.getElementById('nama').value;
-    const telepon = document.getElementById('telepon').value;
-    const email = document.getElementById('email').value || '-';
-    const paket = document.getElementById('paket').value;
-
-    const pesan = `Halo Admin Sahabat Admin! Saya ingin mendaftar:\n\nNama: ${nama}\nNo. WA: ${telepon}\nEmail: ${email}\nPaket: ${paket}`;
-    const url = `https://wa.me/62882022762893?text=${encodeURIComponent(pesan)}`;
-    window.open(url, '_blank');
-  }
-</script>
-
-  <section class="cta">
-    <h2><i class="fas fa-phone-volume"></i> Daftar Sekarang!</h2>
-    </button>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Sahabat Belajar | Tumbuh Bersama, Belajar Bersama</p>
-  </footer>
-
   <script>
-    function submitForm(e) {
-      e.preventDefault();
-      const data = {
-        nama: document.getElementById('nama').value,
-        telepon: document.getElementById('telepon').value,
-        email: document.getElementById('email').value || '-',
-        paket: document.getElementById('paket').value
-      };
+    function sendWhatsApp() {
+      const nama = document.getElementById("nama").value;
+      const program = document.getElementById("program").value;
+      const kontak = document.getElementById("kontak").value;
+      const catatan = document.getElementById("catatan").value;
 
-      fetch("https://script.google.com/macros/s/AKfycbXXXXX/exec", { // Ganti dengan URL Google Apps Script Anda
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(res => {
-        alert("Pendaftaran berhasil! Kami akan segera menghubungi Anda.");
-        const pesan = `Halo  Sahabat Admin! Saya baru saja daftar:\n\nNama: ${data.nama}\nNo WA: ${data.telepon}\nEmail: ${data.email}\nPaket: ${data.paket}`;
-        window.open(`https://wa.me/62882022762893?text=${encodeURIComponent(pesan)}`, '_blank');
-      })
-      .catch(err => {
-        alert("Terjadi kesalahan saat mengirim data.");
-        console.error(err);
-      });
+      const pesan =
+        `Halo, saya ingin mendaftar Bimbel Sahabat Belajar.%0A` +
+        `Nama: ${nama}%0A` +
+        `Program: ${program}%0A` +
+        `No. WA: ${kontak}%0A` +
+        `Catatan: ${catatan}`;
+
+      const url = `https://wa.me/62882022762893?text=${pesan}`;
+      window.open(url, "_blank");
     }
   </script>
-</body>
-</html>
 
 </body>
 </html>
