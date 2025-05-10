@@ -1,0 +1,73 @@
+
+        <tr>
+          <td>Reguler</td>
+          <td>Kelas 2-3x/minggu, Modul, Try Out</td>
+          <td>Rp 350.000/bulan</td>
+        </tr>
+        <tr>
+          <td>Intensif</td>
+          <td>5x/minggu, Simulasi Ujian, Fokus UTBK</td>
+          <td>Rp 600.000/bulan</td>
+        </tr>
+        <tr>
+          <td>Privat</td>
+          <td>Satu siswa satu tutor, Fleksibel</td>
+          <td>Rp Silahkan konsultasikan dengan admin untuk jadwal dan harga/sesi</td>
+        </tr>
+        <tr>
+          <td>Online</td>
+          <td>Live Zoom, E-Modul, Konsultasi</td>
+          <td>Rp Silahkan konsultasikan dengan admin/bulan</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="cta">
+    Yuk bergabung dengan <strong>Sahabat Belajar</strong> dan mulai perjalanan belajarmu bersama mentor terbaik!  
+    <br /><br />
+    👉 <a href="https://wa.me/62882022762893">Daftar Sekarang via WhatsApp</a>
+  </div>
+
+  <section class="form-section">
+    <h2>Formulir Pendaftaran</h2>
+    <form onsubmit="sendWhatsApp(); return false;">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" required />
+
+      <label for="program">Pilih Program</label>
+      <select id="program" required>
+        <option value="Reguler">Reguler</option>
+        <option value="Intensif">Intensif</option>
+        <option value="Privat">Privat</option>
+        <option value="Online">Online</option>
+      </select>
+
+      <label for="kontak">Nomor WhatsApp</label>
+      <input type="tel" id="kontak" required />
+
+      <label for="catatan">Catatan Tambahan</label>
+      <textarea id="catatan" rows="4"></textarea>
+
+      <button type="submit">Kirim ke WhatsApp</button>
+    </form>
+  </section>
+
+  <script>
+    function sendWhatsApp() {
+      const nama = document.getElementById("nama").value;
+      const program = document.getElementById("program").value;
+      const kontak = document.getElementById("kontak").value;
+      const catatan = document.getElementById("catatan").value;
+
+      const pesan =
+        `Halo, saya ingin mendaftar Bimbel Sahabat Belajar.%0A` +
+        `Nama: ${nama}%0A` +
+        `Program: ${program}%0A` +
+        `No. WA: ${kontak}%0A` +
+        `Catatan: ${catatan}`;
+
+      const url = `https://wa.me/62882022762893?text=${pesan}`;
+      window.open(url, "_blank");
+    }
+  </script>
